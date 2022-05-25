@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeTemperature : MonoBehaviour
+public class BunsenCalculations : MonoBehaviour
 {
     CubeData cubeData;
     [HideInInspector]float curTemperature = 25;
@@ -30,6 +30,8 @@ public class CubeTemperature : MonoBehaviour
             Cooling(timeElapsed);
         return curTemperature;
     }
+
+    public void SetCubeData(CubeData _cubeData) => cubeData = _cubeData;
 
     IEnumerator UpdateTemperature(float duration)
     {

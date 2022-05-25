@@ -10,7 +10,6 @@ public class BurnerMain : Grabbable
         base.OnInteractableDown();
         if(input != "Fire1" || !flameOn)
             return;
-        print("oh yeah");
         base.OnSustainInteract.Invoke(true);
     }
 

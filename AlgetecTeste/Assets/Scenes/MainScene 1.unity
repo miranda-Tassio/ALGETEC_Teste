@@ -5716,6 +5716,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
+      propertyPath: cubeData
+      value: 
+      objectReference: {fileID: 11400000, guid: c31c489f682cd634c8ba47894862cd88, type: 2}
+    - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
+      propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
+      propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
+      propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 497959243514883827}
+    - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
+      propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
+      propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCubeData
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
+      propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BunsenCalculations, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
+      propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5430193601041876878, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: m_Name
       value: RedCube
@@ -12769,8 +12801,23 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6620339511539739604, guid: f7db6194d22e807468f54117982457d3, type: 3}
+      propertyPath: handlerType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7db6194d22e807468f54117982457d3, type: 3}
+--- !u!114 &497959243514883827 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4025296379323654277, guid: f7db6194d22e807468f54117982457d3, type: 3}
+  m_PrefabInstance: {fileID: 497959243514883826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c23a5d41afe764a9215d1eaf9ea770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &543450651612123126 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5985183879668707351, guid: 948dbadf8ddc8404e845026aa1398ad6, type: 3}
