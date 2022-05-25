@@ -39,7 +39,6 @@ public class TermometerMain : Grabbable
         base.OnInteractableUp();
         if (input == "Fire1")
             uptimeDuration = 15;
-            base.OnSustainInteract.Invoke(false);
             updateFlag = true;
     }
 
@@ -50,7 +49,7 @@ public class TermometerMain : Grabbable
 
         if (uptimeDuration <= 0)
         {
-            base.OnSustainInteract.Invoke(true);
+            base.OnSustainInteract.Invoke(false);
             base.OnInteract.Invoke(false);
             turnedOn = false; 
             return;

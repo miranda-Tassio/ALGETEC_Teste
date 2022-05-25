@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BunsenCalculations : MonoBehaviour
 {
-    CubeData cubeData;
+    [HideInInspector]public CubeData cubeData;
     [HideInInspector]float curTemperature = 25;
     bool isHeating = false;
     bool wasHeating = false;
@@ -15,7 +15,6 @@ public class BunsenCalculations : MonoBehaviour
     void TemperatureEquation(float seconds, float initTemperature, float clampTemperature, float materialConstant)
     {
         curTemperature = initTemperature + (clampTemperature - initTemperature) * (1 - Mathf.Exp(-materialConstant * seconds));
-        print(curTemperature);
     }
 
     void Heating(float time)=> TemperatureEquation(time, curTemperature, cubeData.maxTemperature, cubeData.heatConstant);
@@ -31,8 +30,6 @@ public class BunsenCalculations : MonoBehaviour
         return curTemperature;
     }
 
-    public void SetCubeData(CubeData _cubeData) => cubeData = _cubeData;
-
     IEnumerator UpdateTemperature(float duration)
     {
         var end = Time.time + duration;
@@ -46,7 +43,6 @@ public class BunsenCalculations : MonoBehaviour
     void Update()
     {
         timeElapsed += Time.deltaTime;
-        print(timeElapsed);
         if (isHeating == wasHeating)
             return;
         timeElapsed = 0;

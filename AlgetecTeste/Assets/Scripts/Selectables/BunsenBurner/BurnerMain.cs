@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BurnerMain : Grabbable
 {
+    CubeData slot;
     bool flameOn = true;
     public override void OnInteractableDown(string input)
     {
@@ -17,5 +18,10 @@ public class BurnerMain : Grabbable
     {
         base.OnInteractableUp();
         base.OnSustainInteract.Invoke(false);
+    }
+    public void SetCubeData(CubeData _cubeData) 
+    {
+        slot = _cubeData;
+        GetComponent<BunsenCalculations>().cubeData = _cubeData;
     }
 }

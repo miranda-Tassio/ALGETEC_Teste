@@ -9,7 +9,4 @@ public class CubeData : ScriptableObject
     public float coolConstant{get; private set;}
     public float minTemperature {get; private set;}
     public float maxTemperature {get; private set;}
-    [HideInInspector]public bool onBunsen;
-
-
 }
