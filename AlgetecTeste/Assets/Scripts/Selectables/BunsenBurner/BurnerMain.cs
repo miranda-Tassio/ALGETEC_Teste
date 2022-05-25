@@ -22,6 +22,5 @@ public class BurnerMain : Grabbable
     public void SetCubeData(CubeData _cubeData) 
     {
         slot = _cubeData;
-        GetComponent<BunsenCalculations>().cubeData = _cubeData;
     }
 }

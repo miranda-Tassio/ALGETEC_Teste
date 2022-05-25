@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2084128517819155927}
   - component: {fileID: 4895449811526310670}
   - component: {fileID: 5107538112535490834}
-  - component: {fileID: 8108618631717021812}
   - component: {fileID: 6166309902335359469}
   - component: {fileID: 818114983005957821}
   m_Layer: 6
@@ -101,6 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handlerType: 0
+  cubeData: {fileID: 0}
+  onSendCubeData:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5107538112535490834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,20 +119,6 @@ MonoBehaviour:
   increment: 0
   bunsenTrans: {fileID: 0}
   initTrans: {fileID: 0}
---- !u!114 &8108618631717021812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5430193601041876878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73fd9daaf4debe74e89bc5d0b6e93386, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curTemperature: 25
-  cubeData: {fileID: 11400000, guid: 0e19d710ee373c04a9699679e0596d57, type: 2}
 --- !u!65 &6166309902335359469
 BoxCollider:
   m_ObjectHideFlags: 0

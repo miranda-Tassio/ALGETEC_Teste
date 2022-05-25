@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BunsenCalculations : MonoBehaviour
+public class TermometerCalculations : MonoBehaviour
 {
     [HideInInspector]public CubeData cubeData;
     [HideInInspector]float curTemperature = 25;

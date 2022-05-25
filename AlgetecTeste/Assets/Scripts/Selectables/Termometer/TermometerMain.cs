@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class TermometerMain : Grabbable
 {
-    CubeTemperature cubeTemperature;
+    TermometerCalculations termometerCalculations;
     bool turnedOn = false;
     bool updateFlag = false;
     float uptimeDuration;

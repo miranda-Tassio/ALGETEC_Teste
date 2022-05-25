@@ -891,7 +891,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -5730,7 +5730,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a5576dbaa712b384e9b61a649df5fd75, type: 2}
     - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -5743,11 +5743,11 @@ PrefabInstance:
     - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 497959243514883827}
+      objectReference: {fileID: 4945341691555977910}
     - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 4945341691555977910}
+      objectReference: {fileID: 0}
     - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -5762,15 +5762,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetBunsenDataSlot
+      value: SetCubeData
       objectReference: {fileID: 0}
     - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BunsenCalculations, Assembly-CSharp
+      value: BurnerMain, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: BurnerMain, Assembly-CSharp
+      value: BunsenCalculations, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1623010852770318808, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -5791,14 +5791,6 @@ PrefabInstance:
     - target: {fileID: 5430193601041876878, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: m_Name
       value: RedCube
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108618631717021812, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
-      propertyPath: cubeData
-      value: 
-      objectReference: {fileID: 11400000, guid: c31c489f682cd634c8ba47894862cd88, type: 2}
-    - target: {fileID: 8108618631717021812, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9046877559617291936, guid: 12acc89c2b6ef664087536c30627dc7b, type: 3}
       propertyPath: increment
@@ -6168,7 +6160,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -10958,7 +10950,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a5576dbaa712b384e9b61a649df5fd75, type: 2}
     - target: {fileID: 4895449811526310670, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4895449811526310670, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -10971,11 +10963,11 @@ PrefabInstance:
     - target: {fileID: 4895449811526310670, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 497959243514883827}
+      objectReference: {fileID: 4945341691555977910}
     - target: {fileID: 4895449811526310670, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 4945341691555977910}
+      objectReference: {fileID: 0}
     - target: {fileID: 4895449811526310670, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -10990,15 +10982,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4895449811526310670, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetBunsenDataSlot
+      value: SetCubeData
       objectReference: {fileID: 0}
     - target: {fileID: 4895449811526310670, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BunsenCalculations, Assembly-CSharp
+      value: BurnerMain, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4895449811526310670, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: BurnerMain, Assembly-CSharp
+      value: BunsenCalculations, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4895449811526310670, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
       propertyPath: onSendCubeData.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -11031,10 +11023,6 @@ PrefabInstance:
     - target: {fileID: 5430193601041876878, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
       propertyPath: m_Name
       value: BlueCube
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108618631717021812, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7478065bfa7f2754d98c8e0098b1c249, type: 3}
@@ -12995,19 +12983,9 @@ PrefabInstance:
       propertyPath: handlerType
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4025296379323654277, guid: f7db6194d22e807468f54117982457d3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7db6194d22e807468f54117982457d3, type: 3}
---- !u!114 &497959243514883827 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4025296379323654277, guid: f7db6194d22e807468f54117982457d3, type: 3}
-  m_PrefabInstance: {fileID: 497959243514883826}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c23a5d41afe764a9215d1eaf9ea770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &543450651612123126 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5985183879668707351, guid: 948dbadf8ddc8404e845026aa1398ad6, type: 3}
@@ -13155,7 +13133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5893022506764085371, guid: 87c0163a272b53045a28b4ad94a0976d, type: 3}
       propertyPath: outlineWidth
-      value: 2.29
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6870360036730787374, guid: 87c0163a272b53045a28b4ad94a0976d, type: 3}
       propertyPath: m_Layer
