@@ -23,7 +23,7 @@ public class TermometerMain : Grabbable
             if(turnedOn)
             {
                 base.OnSustainInteract.Invoke(true);
-                StartCoroutine(cubeTemperature.UpdateTemperature);
+                StartCoroutine(cubeTemperature.UpdateTemperatureReference);
                 updateFlag = false;
             }
             else
@@ -40,7 +40,7 @@ public class TermometerMain : Grabbable
         base.OnInteractableUp();
         if (input == "Fire1")
             uptimeDuration = 15;
-            StopCoroutine(cubeTemperature.UpdateTemperature);
+            StopCoroutine(cubeTemperature.UpdateTemperatureReference);
             base.OnSustainInteract.Invoke(false);
             updateFlag = true;
     }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9695f4f7251834eb61f0212be78af3, type: 3}
   m_Name: TemperatureData
   m_EditorClassIdentifier: 
-  currentTemperature: 0
-  currentUnit: 
-  maxTemperature: 0
+  currentTemperature: 25
+  currentUnit: Celsius
+  maxTemperature: 25
