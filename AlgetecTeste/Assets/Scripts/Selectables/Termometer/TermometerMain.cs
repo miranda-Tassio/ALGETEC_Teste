@@ -6,10 +6,9 @@ using UnityEngine.Events;
 
 public class TermometerMain : Grabbable
 {
+    CubeTemperature cubeTemperature;
     bool turnedOn = false;
-
     bool updateFlag = false;
-
     float uptimeDuration;
     void Awake() 
     {
@@ -24,6 +23,7 @@ public class TermometerMain : Grabbable
             if(turnedOn)
             {
                 base.OnSustainInteract.Invoke(true);
+                StartCoroutine(cubeTemperature.UpdateTemperature);
                 updateFlag = false;
             }
             else
@@ -40,9 +40,9 @@ public class TermometerMain : Grabbable
         base.OnInteractableUp();
         if (input == "Fire1")
             uptimeDuration = 15;
+            StopCoroutine(cubeTemperature.UpdateTemperature);
             base.OnSustainInteract.Invoke(false);
             updateFlag = true;
-            
     }
 
     void Update()

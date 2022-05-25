@@ -7,11 +7,18 @@ public class CubeTemperature : MonoBehaviour
     [HideInInspector]public float curTemperature = 25;
     [SerializeField] CubeData cubeData; 
     bool isHeating;
-    float timeTracker;
-    int timeSinceHeatChange;
-    void Update()
+    IEnumerator UpdateTemperatureReference;
+    void Start() => UpdateTemperatureReference = UpdateTemperature(0.9);
+    public IEnumerator UpdateTemperature(float duration)
     {
-        timeTracker += Time.deltaTime;
+        var end = Time.time + duration;
+        float timeElapsed;
+        while(end > Time.time)
+        {
+            checkTemperature(timeElapsed);
+            yield return new WaitForSeconds(0.1f);
+            timeElapsed += Time.deltaTime;
+        }
     }
 
     void TemperatureEquation(float seconds, float initTemperature, float clampTemperature, float materialConstant)

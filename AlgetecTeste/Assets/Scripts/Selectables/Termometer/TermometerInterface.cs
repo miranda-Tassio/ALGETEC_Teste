@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TermometerInterface : MonoBehaviour
 {
-    [SerializeField] float numericText; 
+    [SerializeField] TermometerData termometerData;
     bool visorOn;
     public void SetVisorOn(bool _visorOn) => visorOn = _visorOn;
 }
