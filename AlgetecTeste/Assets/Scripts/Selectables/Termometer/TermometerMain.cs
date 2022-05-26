@@ -9,6 +9,7 @@ public class TermometerMain : Grabbable
     TermometerCalculations termometerCalculations;
     bool turnedOn = false;
     bool updateFlag = false;
+    bool isMeasuring = false;
     float uptimeDuration;
     void Awake()
     {
@@ -26,6 +27,7 @@ public class TermometerMain : Grabbable
                 base.OnSustainInteract.Invoke(true);
                 termometerCalculations.StartUpdateTemperature();
                 updateFlag = false;
+                isMeasuring = true;
             }
             else
             {
@@ -39,10 +41,12 @@ public class TermometerMain : Grabbable
     public override void OnInteractableUp(string input)
     {
         base.OnInteractableUp();
+        if (!isMeasuring)
+            return;
         if (input == "Fire1")
         {
             if (termometerCalculations.UpdateTemperatureReference != null)
-                StopCoroutine(termometerCalculations.UpdateTemperatureReference);
+                termometerCalculations.StopCoroutine(termometerCalculations.UpdateTemperatureReference);
             uptimeDuration = 15;
             updateFlag = true;
         }
@@ -58,6 +62,7 @@ public class TermometerMain : Grabbable
             base.OnSustainInteract.Invoke(false);
             base.OnInteract.Invoke(false);
             turnedOn = false;
+            isMeasuring = false;
             return;
         }
         uptimeDuration -= Time.deltaTime;

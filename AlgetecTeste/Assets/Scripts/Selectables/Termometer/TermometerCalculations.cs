@@ -16,22 +16,22 @@ public class TermometerCalculations : MonoBehaviour
 
     void OnEnable() => BurnerMain.OnSetCube += HandleCubeSet;
     void OnDisable() => BurnerMain.OnSetCube -= HandleCubeSet;
-    //void Awake() => UpdateTemperatureReference = UpdateTemperature(0.9f);
 
-    void TemperatureEquation(float seconds, float initTemperature, float clampTemperature, float materialConstant) =>
+    void TemperatureEquation(float seconds, float initTemperature, float clampTemperature, float materialConstant)
+    {
         curTemperature = initTemperature + (clampTemperature - initTemperature) * (1 - Mathf.Exp(-materialConstant * seconds));
+    }
 
     void Heating(float time) => TemperatureEquation(time, curTemperature, cubeData.maxTemperature, cubeData.heatConstant);
 
     void Cooling(float time) => TemperatureEquation(time, curTemperature, cubeData.minTemperature, cubeData.coolConstant);
 
-    float CheckTemperature(float timeElapsed)
+    void CheckTemperature(float timeElapsed)
     {
         if (isHeating)
             Heating(timeElapsed);
         else
             Cooling(timeElapsed);
-        return curTemperature;
     }
     public void StartUpdateTemperature()
     {
@@ -45,13 +45,17 @@ public class TermometerCalculations : MonoBehaviour
         var end = Time.time + duration;
         while (end > Time.time)
         {
-            curTemperature = CheckTemperature(timeElapsed);
+            CheckTemperature(timeElapsed);
             OnTemperatureChange?.Invoke(curTemperature);
             yield return new WaitForSeconds(0.1f);
         }
     }
 
-    void HandleCubeSet(CubeData _cubeData) => cubeData = _cubeData;
+    void HandleCubeSet(CubeData _cubeData)
+    {
+        cubeData = _cubeData;
+        curTemperature = 00.0f;
+    }
     void Update()
     {
         burnerMain.slot = cubeData;
