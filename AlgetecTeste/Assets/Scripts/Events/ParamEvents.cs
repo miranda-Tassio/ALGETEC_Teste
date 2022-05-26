@@ -7,4 +7,8 @@ namespace Algetec.ParamEvents
     public class GrabbableEvent : UnityEvent<Grabbable>{}
     public class TouchableEvent : UnityEvent<Touchable>{}
     [System.Serializable] public class CubeDataEvent : UnityEvent<CubeData>{}
+
+    [System.Serializable] public class StringEvent : UnityEvent<string>{}
+
+    [System.Serializable] public class FloatEvent : UnityEvent<float>{}
 }

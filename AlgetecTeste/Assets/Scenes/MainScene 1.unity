@@ -431,6 +431,7 @@ MonoBehaviour:
   termometerData: {fileID: 11400000, guid: 6ea374798e78e3f4092a853db2ee2551, type: 2}
   initTarget: {fileID: 799928506}
   endTarget: {fileID: 1822665280}
+  displayText: {fileID: 1777101214}
   increment: 1.5
 --- !u!1 &337707192
 GameObject:
@@ -13426,6 +13427,34 @@ PrefabInstance:
       propertyPath: burnerMain
       value: 
       objectReference: {fileID: 4945341691555977910}
+    - target: {fileID: 4431527346149045323, guid: 87c0163a272b53045a28b4ad94a0976d, type: 3}
+      propertyPath: OnTemperatureChange.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431527346149045323, guid: 87c0163a272b53045a28b4ad94a0976d, type: 3}
+      propertyPath: OnTemperatureChange.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431527346149045323, guid: 87c0163a272b53045a28b4ad94a0976d, type: 3}
+      propertyPath: OnTemperatureChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 303285747}
+    - target: {fileID: 4431527346149045323, guid: 87c0163a272b53045a28b4ad94a0976d, type: 3}
+      propertyPath: OnTemperatureChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431527346149045323, guid: 87c0163a272b53045a28b4ad94a0976d, type: 3}
+      propertyPath: OnTemperatureChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateTermometerText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431527346149045323, guid: 87c0163a272b53045a28b4ad94a0976d, type: 3}
+      propertyPath: OnTemperatureChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TermometerDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431527346149045323, guid: 87c0163a272b53045a28b4ad94a0976d, type: 3}
+      propertyPath: OnTemperatureChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4762065837649804191, guid: 87c0163a272b53045a28b4ad94a0976d, type: 3}
       propertyPath: m_Layer
       value: 6

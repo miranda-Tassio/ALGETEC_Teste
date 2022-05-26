@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Algetec.ParamEvents;
+using TMPro;
 
 public class TermometerDisplay : ConvertToFahrenheit, IMoveTo
 {
     [SerializeField]TermometerData termometerData;
     [SerializeField]Transform initTarget;
     [SerializeField]Transform endTarget;
+    [SerializeField]TMP_Text displayText;
     [SerializeField][Range(1,10)]float increment;
     bool visorOn = false;
 
@@ -23,4 +25,9 @@ public class TermometerDisplay : ConvertToFahrenheit, IMoveTo
         {
             visorOn = _visorOn;
         }
+    public void UpdateTermometerText(float value)
+    {
+        displayText.text = $"{value}";
+
+    }
 }   

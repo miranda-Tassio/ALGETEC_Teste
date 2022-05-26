@@ -10,7 +10,7 @@ public class TermometerMain : Grabbable
     bool turnedOn = false;
     bool updateFlag = false;
     float uptimeDuration;
-    void Awake() 
+    void Awake()
     {
         termometerCalculations = GetComponent<TermometerCalculations>();
         base.OnInteract.AddListener(GetComponent<TermometerTurnOn>().SetTurnOn);
@@ -19,12 +19,12 @@ public class TermometerMain : Grabbable
     public override void OnInteractableDown(string input)
     {
         base.OnInteractableDown();
-        if(input == "Fire1")
+        if (input == "Fire1")
         {
-            if(turnedOn)
+            if (turnedOn)
             {
                 base.OnSustainInteract.Invoke(true);
-                StartCoroutine(termometerCalculations.UpdateTemperatureReference);
+                termometerCalculations.StartUpdateTemperature();
                 updateFlag = false;
             }
             else
@@ -40,21 +40,24 @@ public class TermometerMain : Grabbable
     {
         base.OnInteractableUp();
         if (input == "Fire1")
-            StopCoroutine(termometerCalculations.UpdateTemperatureReference);
+        {
+            if (termometerCalculations.UpdateTemperatureReference != null)
+                StopCoroutine(termometerCalculations.UpdateTemperatureReference);
             uptimeDuration = 15;
             updateFlag = true;
+        }
     }
 
     void Update()
     {
-        if(!updateFlag)
+        if (!updateFlag)
             return;
 
         if (uptimeDuration <= 0)
         {
             base.OnSustainInteract.Invoke(false);
             base.OnInteract.Invoke(false);
-            turnedOn = false; 
+            turnedOn = false;
             return;
         }
         uptimeDuration -= Time.deltaTime;

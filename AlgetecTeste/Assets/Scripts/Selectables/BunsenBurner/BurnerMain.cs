@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class BurnerMain : Grabbable
 {
+    public static Action<CubeData> OnSetCube;
     [SerializeField] ParticleSystem fireParticles;
-    [HideInInspector]public CubeData slot;
-    [HideInInspector]public bool flameOn = false;
+    [HideInInspector] public CubeData slot;
+    [HideInInspector] public bool flameOn = false;
 
-    void Awake() 
+    void Awake()
     {
         base.OnSustainInteract.AddListener(ToggleForFlameOn);
         base.OnInteract.AddListener(ToggleForFlameOn);
@@ -16,9 +18,9 @@ public class BurnerMain : Grabbable
     public override void OnInteractableDown(string input)
     {
         base.OnInteractableDown();
-        if(input != "Fire1")
+        if (input != "Fire1")
             return;
-        if(!flameOn)
+        if (!flameOn)
             base.OnSustainInteract.Invoke(true);
         else
             base.OnInteract.Invoke(false);
@@ -27,18 +29,19 @@ public class BurnerMain : Grabbable
     public override void OnInteractableUp(string input)
     {
         base.OnInteractableUp();
-        if(!flameOn)
+        if (!flameOn)
             base.OnSustainInteract.Invoke(false);
     }
 
-    public void SetCubeData(CubeData _cubeData) 
+    public void SetCubeData(CubeData _cubeData)
     {
         slot = _cubeData;
+        OnSetCube?.Invoke(slot);
     }
 
     public void ToggleForFlameOn(bool _toogleBunsen)
     {
-        if(_toogleBunsen)
+        if (_toogleBunsen)
         {
             StartCoroutine(TurningFlameOn(3f));
             fireParticles.Play();
