@@ -5,7 +5,8 @@ using Algetec.ParamEvents;
 
 public class CubeMain : Touchable
 {
-    bool toogleTarget = true;
+    static bool measuringSpaceOcuppied;
+    bool isOnTable = true;
     [SerializeField] CubeData cubeData;
     [SerializeField] CubeDataEvent onSendCubeData;
     void Awake() => OnInteract.AddListener(GetComponent<CubeMove>().SetCanMove);
@@ -14,11 +15,14 @@ public class CubeMain : Touchable
         base.OnInteractableDown();
         if (input != "Fire1")
             return;
-            
-        OnInteract.Invoke(toogleTarget);
-        toogleTarget = !toogleTarget;
+        if (isOnTable && measuringSpaceOcuppied)
+            return;    
+        OnInteract.Invoke(isOnTable);
+        isOnTable = !isOnTable;
 
-        if (toogleTarget)
+        if (!isOnTable)
             onSendCubeData.Invoke(cubeData);
+
+        measuringSpaceOcuppied = !isOnTable;
     }
 }

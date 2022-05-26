@@ -178,7 +178,6 @@ GameObject:
   - component: {fileID: 7504082105884041522}
   - component: {fileID: 6620339511539739604}
   - component: {fileID: 5358905796411376655}
-  - component: {fileID: 4025296379323654277}
   m_Layer: 0
   m_Name: BunsenBurner
   m_TagString: Untagged
@@ -247,15 +246,3 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &4025296379323654277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261235666259046140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c23a5d41afe764a9215d1eaf9ea770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ public class TermometerMain : Grabbable
     float uptimeDuration;
     void Awake() 
     {
+        termometerCalculations = GetComponent<TermometerCalculations>();
         base.OnInteract.AddListener(GetComponent<TermometerTurnOn>().SetTurnOn);
         base.OnSustainInteract.AddListener(GetComponent<TermometerInterface>().SetVisorOn);
     }
@@ -23,6 +24,7 @@ public class TermometerMain : Grabbable
             if(turnedOn)
             {
                 base.OnSustainInteract.Invoke(true);
+                StartCoroutine(termometerCalculations.UpdateTemperatureReference);
                 updateFlag = false;
             }
             else
@@ -38,6 +40,7 @@ public class TermometerMain : Grabbable
     {
         base.OnInteractableUp();
         if (input == "Fire1")
+            StopCoroutine(termometerCalculations.UpdateTemperatureReference);
             uptimeDuration = 15;
             updateFlag = true;
     }
